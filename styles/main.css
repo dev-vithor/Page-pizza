@@ -1,0 +1,88 @@
+:root {
+  --color-primary: #ffa500;
+  --color-dark: #232323;
+  --color-light: #eaeaea;
+  --color-white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fff6da;
+}
+
+header {
+  background-color: var(--color-dark);
+  height: 3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  nav {
+    display: flex;
+
+    li {
+      list-style-type: none;
+      margin-left: 40px;
+      a {
+        color: var(--color-light);
+        text-decoration: none;
+        transition: color 0.4s ease-in-out;
+      }
+
+      a:hover {
+        color: var(--color-primary);
+        border-bottom: #ffa500 solid 1px;
+      }
+    }
+  }
+}
+
+section {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+}
+
+section#home {
+  display: flex;
+  width: 100%;
+  height: 400px;
+  margin-bottom: 45px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  background-image: url(../assets/pexels-narda-yescas-1566837.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+section#menu {
+  width: 100vw;
+  display: grid;
+
+  ul {
+    width: 300px;
+    height: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-gap: 20px; */
+    cursor: pointer;
+    list-style-type: none;
+  }
+}
+
+.img-pizza {
+  width: 300px;
+  height: 200px;
+}
