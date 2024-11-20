@@ -17,23 +17,25 @@ html {
 
 body {
   background-color: #fff6da;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
 header {
   background-color: var(--color-dark);
-  height: 3rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  color: var(--color-white);
+  padding: 1.5rem 0;
 
-  nav {
-    display: flex;
+  nav ul {
+    list-style: none;
+    text-align: center;
 
     li {
-      list-style-type: none;
-      margin-left: 40px;
+      display: inline;
+      margin: 0 1.5rem;
+
       a {
         color: var(--color-light);
+        font-weight: 700;
         text-decoration: none;
         transition: color 0.4s ease-in-out;
       }
@@ -46,43 +48,135 @@ header {
   }
 }
 
-section {
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  /* flex-direction: column; */
-}
-
-section#home {
-  display: flex;
-  width: 100%;
-  height: 400px;
-  margin-bottom: 45px;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  color: #fff;
+section .text-home {
   background-image: url(../assets/pexels-narda-yescas-1566837.jpg);
   background-size: cover;
-  background-position: center;
-}
+  color: var(--color-white);
+  min-height: 75vh;
+  padding: 10rem 0;
+  text-align: center;
 
-section#menu {
-  width: 100vw;
-  display: grid;
+  h1 {
+    font-size: 4rem;
+    font-weight: 100;
+  }
 
-  ul {
-    width: 300px;
-    height: auto;
-    grid-template-columns: 1fr 1fr 1fr;
-    /* grid-gap: 20px; */
+  p {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .btn {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 0.75rem 1.5rem;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
     cursor: pointer;
-    list-style-type: none;
+    transition: background-color 0.4s ease-in-out;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 1.5rem;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #cc8d16;
+    }
   }
 }
 
-.img-pizza {
-  width: 300px;
-  height: 200px;
+section:not(#home) {
+  padding: 4rem;
+  text-align: center;
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  p {
+    font-size: 1.25rem;
+  }
+}
+
+.menu-list {
+  list-style: none;
+
+  li {
+    background-color: var(--color-light);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px -4px rgba(0, 0, 0, 0.4);
+    display: inline-table;
+    margin-right: 1.5rem;
+    height: 28rem;
+    width: 28rem;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+
+  img {
+    width: 100%;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    object-fit: cover;
+  }
+
+  h3 {
+    padding: 1rem 1.25rem 0;
+    color: #cc8d16;
+  }
+  p {
+    padding: 1rem 1.25rem 0;
+  }
+}
+
+#about {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.7) 100%
+    ),
+    url(../assets/pexels-eneida-nieves-905847.jpg);
+  background-size: cover;
+  background-position: center;
+  color: var(--color-white);
+}
+
+address {
+  margin: 2rem 0;
+  font-size: italic;
+
+  > * {
+    display: inline-block;
+    margin: 1.5rem;
+    text-align: left;
+  }
+}
+
+footer {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  padding: 2rem;
+  text-align: center;
+}
+
+.btn {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 0.75rem 1.5rem;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.4s ease-in-out;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 1.5rem;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #cc8d16;
+  }
 }
